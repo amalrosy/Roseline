@@ -1,0 +1,10 @@
+New log file opened at Thu Jul 21 16:24:06 IST 2016 by 10308@Amala
+Taking next connection to: 65269
+New client attempting to connect on port: 65270-65269
+  Address = /192.168.0.102:65269
+This client on port 65270 has uuid 0822c032-fd6f-41b3-8424-8b0c324e52f2 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-0822c032-fd6f-41b3-8424-8b0c324e52f2
+Taking next connection to: 65269
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 65269
