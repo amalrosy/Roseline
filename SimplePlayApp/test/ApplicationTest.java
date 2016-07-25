@@ -17,6 +17,13 @@ import play.libs.F.*;
 
 import static play.test.Helpers.*;
 import static org.fest.assertions.Assertions.*;
+import org.junit.Test;
+import play.mvc.Result;
+
+import static org.fest.assertions.Assertions.assertThat;
+import static play.test.Helpers.GET;
+import static play.test.Helpers.fakeRequest;
+import static play.test.Helpers.routeAndCall;
 
 
 /**
@@ -38,6 +45,31 @@ public class ApplicationTest {
         Content html = views.html.index.render("Your new application is ready.");
         assertThat(contentType(html)).isEqualTo("text/html");
         assertThat(contentAsString(html)).contains("Your new application is ready.");
+    }
+	 @Test
+    public void empTestRoute() {
+        Result result = routeAndCall(fakeRequest(GET, "/"));
+        assertThat(result).isNotNull();
+    }
+	@Test
+    public void empTest1() {
+        Result result = routeAndCall(fakeRequest(GET, "/employees"));
+        assertThat(result).isNotNull();
+    }
+	@Test
+    public void empTest2() {
+        Result result = routeAndCall(fakeRequest(GET, "/employee/1"));
+        assertThat(result).isNotNull();
+    }
+	@Test
+    public void empTest3() {
+        Result result = routeAndCall(fakeRequest(GET, "/delemployee/2"));
+        assertThat(result).isNotNull();
+    }
+    @Test
+    public void badRoute() {
+        Result result = routeAndCall(fakeRequest(GET, "/bad"));
+        assertThat(result).isNull();
     }
 
 
